@@ -9,7 +9,7 @@ import Edit from "./components/Edit.jsx";
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
   { path: "/create", element: <Create /> },
-  { path: "/edit", element: <Edit /> },
+  { path: "/edit/:id", element: <Edit /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

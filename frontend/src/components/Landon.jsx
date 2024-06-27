@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 const Landon = () => {
   const [data, setData] = useState([]);
+  const [editId, setEditId] = useState('')
 
   const navigate = useNavigate();
 
@@ -66,7 +67,7 @@ const Landon = () => {
             <div>
               <Link
                 className="px-2 mx-2 py-2 bg-yellow-500 rounded text-[14px]"
-                to={"/edit"}
+                to={`/edit/${d._id}`}
               >
                 Edit task
               </Link>
