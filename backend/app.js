@@ -2,10 +2,14 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const bodyParser = require("body-parser");
+const Router = require("./routes/routes");
 
 const app = express();
+app.use(cors());
+app.use(bodyParser.json());
+app.use(express.json());
 
-app.get("/", (req, res) => res.send("hello world"));
+app.use('/api',Router);
 
 // mongodb connection
 mongoose
